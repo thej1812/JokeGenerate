@@ -9,7 +9,6 @@ let getJoke = () => {
     .then(item => {
         jokeContainer.textContent = `${item.joke}`;
         
-        // Change emoji randomly
         const emojis = ["😂", "🤣", "😆", "😹", "😜", "😝", "😎"];
         emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
     })

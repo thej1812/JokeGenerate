@@ -28,14 +28,29 @@ span{
     display: block;
     text-align: center;
     font-size: 100px;
+    opacity: 0;  /* Initially hidden */
+    animation: fadeIn 1s ease-in-out forwards;  /* Fade-in effect */
 }
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
 
 p{
     margin-top: 20px;
     color: aliceblue;
     font-family: monospace;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
+    animation: fadeIn 1s ease-in-out forwards;
+
 }
 
 button{

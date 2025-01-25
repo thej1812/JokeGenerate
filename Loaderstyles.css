@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: black;
+    color: #fff;
+    opacity: 0;  /* Initially hidden */
+    animation: fadeOut 6.9s ease-in-out forwards;  /* Fade-in effect */
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.loader {
+    display: flex;
+    gap: 10px;
+}
+
+.loader:before,
+.loader:after {
+    content: "";
+    height: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(farthest-side, #000 95%, #0000) 35% 35%/6px 6px no-repeat #fff;
+    transform: scaleX(var(--s, 1)) rotate(0deg);
+    animation: l6 1s infinite linear;
+}
+
+.loader:after {
+    --s: -1;
+    animation-delay: -0.1s;
+}
+
+h4 {
+    font-size: larger;
+}
+
+@keyframes l6 {
+    100% {
+        transform: scaleX(var(--s, 1)) rotate(360deg);
+    }
+}
