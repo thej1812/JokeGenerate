@@ -67,7 +67,7 @@ p {
     opacity: 0.15;
 }
 
-/* Random positions */
+/*  positions */
 .emoji:nth-child(1) { top: 5%; left: 10%; }
 .emoji:nth-child(2) { top: 15%; left: 50%; }
 .emoji:nth-child(3) { top: 25%; left: 80%; }
